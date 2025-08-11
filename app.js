@@ -20,3 +20,13 @@ function agregarAmigo() {
 function limpiarCaja() {
   document.getElementById("amigo").value = "";
 }
+
+function mostrarLista() {
+  let lista = document.getElementById("resultado");
+  // no hay duplicados al actualizar.
+  lista.innerHTML = "";
+  // Iterar sobre el arreglo:
+  for (let i = 0; i < amigos.length; i++) {
+    lista.innerHTML += `<li>${amigos[i]}</li>`;
+  }
+}
