@@ -30,3 +30,16 @@ function mostrarLista() {
     lista.innerHTML += `<li>${amigos[i]}</li>`;
   }
 }
+function sortearAmigo() {
+  //Validar que haya amigos disponibles:
+  if (amigos != "") {
+    resultado = document.getElementById("resultado");
+    //Generar un índice aleatorio y obtener un nombre sorteado:
+    eleccion = Math.floor(Math.random() * amigos.length);
+    console.log(eleccion);
+    //Mostrar el resultado:
+    resultado.innerHTML = `Tu amigo secreto es ${amigos[eleccion]}`;
+  } else {
+    alert("¡Intruduzca al menos dos nombres!");
+  }
+}
